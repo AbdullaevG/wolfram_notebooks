@@ -1,0 +1,2193 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    115324,       2183]
+NotebookOptionsPosition[    111716,       2092]
+NotebookOutlinePosition[    112062,       2107]
+CellTagsIndexPosition[    112019,       2104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H1", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"v", "+", 
+        RowBox[{"w1", "*", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"1", "I", "*", "k"}]}], ")"}]}]}], ",", "0", ",", 
+       RowBox[{"a1", "*", "k"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"v", "+", 
+        RowBox[{"w1", "*", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"1", "I", "*", "k"}]}], ")"}]}]}], ",", "0", ",", 
+       RowBox[{
+        RowBox[{"-", "a1"}], "*", "k"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{
+        RowBox[{"-", "a1"}], "*", "k"}], ",", "0", ",", 
+       RowBox[{"v", "+", 
+        RowBox[{"w1", "*", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"1", "I", "*", "k"}]}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"a1", "*", "k"}], ",", "0", ",", 
+       RowBox[{"v", "+", 
+        RowBox[{"w1", "*", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"1", "I", "*", "k"}]}], ")"}]}]}], ",", "0"}], "}"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "H1", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"Eigenvalues", "[", "H1", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f1", "[", 
+    RowBox[{"k_", ",", "w1_", ",", "a1_"}], "]"}], "=", 
+   RowBox[{"A", "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f2", "[", 
+    RowBox[{"k_", ",", "w1_", ",", "a1_"}], "]"}], "=", 
+   RowBox[{"A", "[", 
+    RowBox[{"[", "3", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f3", "[", 
+    RowBox[{"k_", ",", "w1_", ",", "a1_"}], "]"}], "=", 
+   RowBox[{"A", "[", 
+    RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f4", "[", 
+    RowBox[{"k_", ",", "w1_", ",", "a1_"}], "]"}], "=", 
+   RowBox[{"A", "[", 
+    RowBox[{"[", "4", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"k", ",", "0.5", ",", "a1"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"k", ",", "0.5", ",", "a1"}], "]"}], ",", 
+       RowBox[{"f3", "[", 
+        RowBox[{"k", ",", "0.5", ",", "a1"}], "]"}], ",", 
+       RowBox[{"f4", "[", 
+        RowBox[{"k", ",", "0.5", ",", "a1"}], "]"}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", 
+       RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"al", ",", "0", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"f4", "[", 
+  RowBox[{"Pi", ",", "1", ",", "0.5"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"f4", "[", 
+      RowBox[{"k", ",", "1.2", ",", "1"}], "]"}], ",", 
+     RowBox[{"f1", "[", 
+      RowBox[{"k", ",", "0.1", ",", "1"}], "]"}], ",", 
+     RowBox[{"f2", "[", 
+      RowBox[{"k", ",", "0.1", ",", "1"}], "]"}], ",", 
+     RowBox[{"f3", "[", 
+      RowBox[{"k", ",", "0.1", ",", "1"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", 
+     RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.794126473598759*^9, 3.7941265719009514`*^9}, {
+  3.794126610436531*^9, 3.7941267679100294`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "k"}]}], ")"}], " ", "w1"}]}], "0", 
+      RowBox[{"a1", " ", "k"}]},
+     {
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "k"}]}], ")"}], " ", "w1"}]}], "0", 
+      RowBox[{
+       RowBox[{"-", "a1"}], " ", "k"}], "0"},
+     {"0", 
+      RowBox[{
+       RowBox[{"-", "a1"}], " ", "k"}], "0", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "k"}]}], ")"}], " ", "w1"}]}]},
+     {
+      RowBox[{"a1", " ", "k"}], "0", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "k"}]}], ")"}], " ", "w1"}]}], "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.794126522504032*^9, 3.7941265722412486`*^9}, {
+   3.794126610767008*^9, 3.794126642578616*^9}, 3.794126673677371*^9, {
+   3.7941267119051456`*^9, 3.7941267361952815`*^9}, 3.7941267690160303`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`al$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`al$$], 0, 1}}, Typeset`size$$ = {206., {66., 70.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`al$5521$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`al$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`al$$, $CellContext`al$5521$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`f1[$CellContext`k, 0.5, $CellContext`a1], 
+         $CellContext`f2[$CellContext`k, 0.5, $CellContext`a1], 
+         $CellContext`f3[$CellContext`k, 0.5, $CellContext`a1], 
+         $CellContext`f4[$CellContext`k, 
+          0.5, $CellContext`a1]}, {$CellContext`k, 0, 2 Pi}], 
+      "Specifications" :> {{$CellContext`al$$, 0, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{487., {144., 149.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.794126522504032*^9, 3.7941265722412486`*^9}, {
+   3.794126610767008*^9, 3.794126642578616*^9}, 3.794126673677371*^9, {
+   3.7941267119051456`*^9, 3.7941267361952815`*^9}, 3.7941267690920143`*^9}],
+
+Cell[BoxData["5.119239191759949`"], "Output",
+ CellChangeTimes->{{3.794126522504032*^9, 3.7941265722412486`*^9}, {
+   3.794126610767008*^9, 3.794126642578616*^9}, 3.794126673677371*^9, {
+   3.7941267119051456`*^9, 3.7941267361952815`*^9}, 3.794126769147998*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1: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
+     "]]}, 
+   {Hue[0.9060679774997897, 0.6, 0.6], LineBox[CompressedData["
+1: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
+3/8HTMWbJA==
+     "]]}, 
+   {Hue[0.1421359549995791, 0.6, 0.6], LineBox[CompressedData["
+1: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
+     "]]}, 
+   {Hue[0.37820393249936934`, 0.6, 0.6], LineBox[CompressedData["
+1:eJw113k4Vd33AHDD5V4qGeuNUpQGytRgtg6lFJUkKRJ6SYkilDklQyQiGctw
+3ZDMY4Z9C5lS6GaMZEqiOueah3zP+zy/3x/nOc/nn332WXvttfeSsrlubMvF
+wcGxTD7/vY8dFTi4KMXHVDOlMSz1aJhGsfcfmiQfU/5Zw8G1ujRst9TPpHXi
+fMyKUwJspE3DBObr55SE+ZhHSg8HSqnSsLYM/xx7Lj6mi/P+OyOyNMyMNr2h
+Y5DGPNlm13BDkIZdru/9k5dGY4aIveuL7qViAXqZz+xkaEx98fl3oi5UzJm1
+IBwlQmXq2Bs62obzYk0XxMeGRXiZdonuKtoVPNhydVae+gYepslosTuapGBD
+BXjkKT4Ks940yLxakIIdSOFlPVzFzTS7dVj27iFuTFO6XT50jpNpvDM77NUV
+Lmyjl4BP2DgHU/fg04LXTzix1kQlM7u+FbSN4fN4sZ0D+2hf+H1/xTLa/NHc
+LICbA2PsalM1qlpEzQqSwgWhf0ExvvWGS+M8yp88/8t/yzJIKWr1rHs5i7Sl
+GH/LUxZh/LUeD2/+NOqNp4/06S+AhEOF9a0wNroymWpXMzgHf5uE0/8444hr
+o9z5riezcBNWm1yZ/YW2LjAUe1xmoGxvC3O6eByVWkw2iRlNQ67Qu7z1VaNI
+TSu/rcJ8CowthY4NvBxF3CwD4a6zUzCTZTGUET+Kkq/pBM+cngLNQ2wx9duj
+yO+fExvUDaegwX2Ll8XeUVT/w5HdqzkFA72eeimZI8inJ4geKjkFQgyFHtmY
+YZT93HQ8bYgNN9XjuLWvD6Iber7EiisboqMlvphaDqKyzaUzb53ZUPQrqej6
+8UF0Jp/TIdiJDTOpqbYpcoNoeiEjQ9yeDbdXZddTxr6hRftD8RbmbPD9Uh3a
+bPUNYSLn7c7qsiHYd1jknPEAUtzfJKYkzIaMLrsJZ50BVBSq7HpoLRsalX/U
+PlAcQFm7Na+cX80G/u+TbpUCAyhMdUoinJcN4s9/5ULMV7S2TbZOdJEAGR1R
+1ZagfpQ1KK6QPEyA+v2L+mNXvyC5KxXhpeUENM75pFsafEHutFJ3w1ICzK4l
+cn2W+4Ki56vQUBEBbqe7K99M9KLeVQm3N+QRkCd1WinBqReZ5O1/nsIgYEf1
+YfETLj3IrTcwVCaaANHZPROFHl2o1f/wVi5nAtKuGh6VPd+FUub8fg47EaDc
+f5WRrN6FLhhoKjVdI8Co7oXVw8VOFMP/QjXRnoDQKKnPdj6dyOAM5aSlFQFc
+imLVG/w70HnrsjPmRgT8tl965BfMQq0u/fe1lQlg5SgJnrBjodjSwCUDRQJe
+T9lFbDzEQq9qDvhZyBMQcKctonzlE3oxHZkdKEuAeCwjku3+CemXKLxdkSbg
+UL1R1GXbdkTdLPzqvigBu9YEihw42I6i6QGmtcIECJyuiKJItaP4bl4JXiEC
+uvtlolO+tCHH8ba5x2sIcJpZiO493YbE66y2tPMSECuTHnNStxVx7BceHJ3H
+wcehZ53kllaUbB+bfnYOhzqbzfLdix+R36fpyOYZHM57TsmL3PyIhGU8xirZ
+ONzPfKYYZP0BjavuSKubxKGHyt57Xfs9asOT/14fxOFebYI6zNWje2HN3ns+
+4DD2QS3KtqweCRaZ2P/TgsOJ7s6fobfr0a0k1V2873EQ/yWS1DX3DkWGSuwZ
+b8Qhb33YivN8HfKwMDFg1eHQd9W7lr5Qg/5qZh1XqsZB1018U/PrGnSlJrzx
+aBUOGX5lbrhnDXJnXZa2rcTBNXpqu/biW8R5Mv8a/TUO/NXXQjoX3yDO8GvX
+9UpxcJJ+nSi6gJAYT3CQUD4Oaiozx609ERrORdxmeThQDJVXXi1Uo6dP1S6l
+5OKQ4JZlfWSxComnmbVo5uDQ0BC/3XOpAmVMlZyNeYlDVF9H5zvvCrTFwGeW
+nYWDJSEcIrL8GuldkPMxIT0tEfoze7kcuZy6pSGZiYP0da+8r39L0TL/mjAW
+A4fJe6XWu/1KUfjtc5eOki6LZQt7rJSg1Lwe6TfpOJx86+AmzFGCtNyDzMvp
+OHiLWajrcRah2Z2PXr9PxeGIbOzPSP9C5BIW0WNGWhhYif2chSgZLx/+noJD
+pr3hyi2uAtTkcKlMgHRHhWZtFnce6v3WaeP3HIeNHjb9xOpc9PPuWNo20mGe
+BvsihHOQlQS98P0zHBx8Ng00bcpGLpw1IEO6x5f3gP3Wl2jBxr3ycxIOx+78
+DuXZlYWWBl1pIaRl771RwfZlIPuKYYG5RBziA7Ie9qm9QHu8EhoLSfMHRg15
+AgN579hp4kJ6PNj2UfExOuIwh+7ZBDLfHpwYMTZKQ/THFFY16aZQFY0/Z1LR
+jvViz4NJZ4bzfZe1TkYtKb6MbaSVt4x4RLQ8Q7mx1KGZePL/t5bKNHclIu8q
+jT/NpAmZkDae4XjUmqXwIY10205zH+x3LNJMnfH2JZ0nt2eX10IMEg5LXTIn
+HSG/wirmeYLUZg8e1yR9Q6ntzh/BKLR6w7jTZtJG+9J2y22MRPItqdY8pC86
+jec1nwhHDk88ZX7F4SDpGk7TsX2AnsV5v+4m3e+hbFXiFYgiXxRsaSCd5NdR
+Kvf4LhpTljErJ13GPy2pe8oHrTnTa/WKtMo6rQ+7fd3QxpYedTpph4P8i/Km
+Dqh3ZcdoEunWon2FNKuzKGO2ziaeNMs1W1s5H8Dz35K8uP/Gv6X3wyjxEnxK
+mP+YQNoo73ydVoozNMWGM5NJt9GF15129QCeJZe7GaQzDW33FqXdgber0sQK
+SY8fftOr/TAABgs3eDJJy+psCmh0Dwbifmtu63/z0fDYbWIVBmrlqGSIdEf8
+1au/t0VAm2x/+Dzpmaex1UUbHkPpBSlVYTI+6568E/YUiIYRT5+CPaRVHk/Z
+AXcM3Dw1smxA2uyRdAVl7inkmR4TdyR9O8xobdNEHBgwEqmRpMsCs0tNOpKA
+n/XW5Bvprns9q8Sbn0ON7I2iNeT6e2OUvN9fk8GyqmpYk3SSljKlmJUKycV9
+JWmk5TWP5qz/mAYfW3zNeklXq1uZeTbSwT7oQpMYmX/9KuHZUM2An142klGk
+nQ6km6aWvYCiLEOODtJ/91Vy8BRmgMKlpXwJMr8llcdNml5kwWKiTEAu6Yu7
+Dy+bROYAPZL+dY7cH5qxjPCZ5FxwqmLj58j9tPout6ChWR489CZOVZP+MXkp
+ZfJyPghKSixEJOOQWretVjGoELZu8hi+QO7fiEVWGOfaIvgwk3+hm7Sv0v0z
+7TFFEJ6YJm2WhoN50sjoTUYx3DwYFX6RrAeibgy+0rpS6Dt9bfQJWT+4Xpq2
+Bx0vA5FUrFjuBQ5/BngTzD6XgUm2TUst6RbDy7sXhstBSke1i4OsR4Hbdp7U
+olTCqaSLJ5LJerb0w6TJWooJ18rv2HuT9ZFNeSV/zJYJXy20kg8XkPmxmSdK
+OZMJpnUSEqKF5HqcKTbnVnoD7Y1uXWVFOBS/EZukY29hsa3u311lZDzjOtaO
+XawFsy9eZxkIB9siedfWtFoo+XE+mM7EweJjYFfZ91rgjXSfSn+DgwGPSkrI
+9Trw5lT0LqjBYafzU2U5v3fw6+qoGlGPwzd9szNOzxoAZn6Pr2rDQXvE27ql
+rwFOC1B4d7WT9cY/xXH3pkb4Lq3xQ/8TDsavx++PJzSC/IYZnsjPOLyV8ymx
+i2sCR6G4EN0eMv4CqesvRr8HybFnWrLDZD0Zn57YodcK7bizNm0BBytV2s3O
+f1vBt/W7rs8iDuGB4vOBAa2Qf8d3aWqJjIc08IzWtALHD7uwiRVyPPPgTXTd
+NgB+s9VLPASItIif2IK1g4P/dnYCeV5P5ULuPxosOKKsbtmzh4D3chrCNy6w
+IG8kdG+zAnkfeXHArd6PBXTKTwmkRIDx8z0a7rUsEJPplcrbT0B+uET9p+Of
+ISsraLREizzfHWf7w606QItCv256goDvsrkCPIFd0KyvoNBB3m+qGVnOFhld
+gAW32O1wJSBGmsEqbOoCttf7R17uBBwWT4q3WdsNtMlb+bu9CKDzhW5nxnYD
+n/N20YIAAqzG7LS9XvbA5F3Dc/qxBPSkSzrhrV9gjcrQh/g3BJTwZhtnEF9g
+RHjKRaOWgKjLaioXRftAn3Bq7H9HgOEuE46Ws30Q3LcuZM97cj7ZIY8z+vsg
+mQl7f3YQkFI4VXJxoh9+1w0ojU4QUGQ1sjJ6bwD8VUrK2sXZ4OVUoX/m+SCw
+B381H/Rlgy5M/yuQOwgRM533TvqT90tBBf/66kFIv1pifCGADbH5qeVq/YNw
+5v5lJb8HbCiZCpGV3DQExxW2dfbGsIHwNFv9PX4Igof2j83msuFq0PTH2zHD
+ZHxjdIrI+7NZssLZxIejIDkYOMN7agrsghq5vraOQyX9bOiE6TTUBMjJhTX/
+AiGhHNYzuxmwFBp5K3oOh5sd3EHzgbPAVq/X/ubOhk8pXzlXfZ6D3Otr5m1u
+TANPlctC3aYFoPiN+ttEz0LB0qTlUuQi+MdtPbo+eh6OWxccPr6wBAYUv121
+IYtw/+6lhXbbv5Bz1LHrV+YyMKNYXKsXVkA1HtV9SF8ByUq6bU4VB5Zj046t
+G+XAhuRjGrDHnJjdFhM5nSlOjLJMxB6148IKhqjFh/9wYeJaWx1z5LmxY6I8
+20M5KZgqfjPHlZ+CuR/bdyCLgwcb2oiCCropWGMGYVy3wINNYrLhUQwezN51
+wXQzPxUj1G57RQTyYgl6+xZOU2mYS/q6Bo5zVCzr1dmn1atomPgrzDTXgoqV
+iXnt20X2iRlKi0sXrKhYx8gbp7//0LDNp9hRFZepmGDgyaEMsq9sb8keveVO
+xQLfXX2/fJyGbYvWFZuOomIuR1KevYimYbRZQ33Oj1TMP7dWQziOhuXfjGwv
+aKdiEevHuryTaBjPJQ7Xfzuo2Kvv8iLGDBo2/lh5qb6Pio0FVQYtlZJ9rGPl
+logJKmbZ0HnjVC8N67u3MX8bPw1zVFxcU/mV9B3+zM41NMw7VvLl9mGyLy7w
+KH0gRMPi7G1HFifI8TQK1uPkvFk09jnGXxrmz+cwXL2Dhg3dWDcryM2H2Sbo
+PHKRo2FEl1q0F5UPOyl6xGi7Ag1bm3nng5EgH3aJWiIafoCGSQrRHSpE+bDY
+A6v+0VUnv+NRT9u+gQ8bKLFTmtEi+/Nv4+kRm/iwdOdqqywdGvZ//Tv2//37
+/wBj2hyk
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->
+   NCache[{{-Pi, Pi}, {-3.6265990060169226`, 
+     7.253198012033846}}, {{-3.141592653589793, 
+    3.141592653589793}, {-3.6265990060169226`, 7.253198012033846}}],
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{{3.794126522504032*^9, 3.7941265722412486`*^9}, {
+   3.794126610767008*^9, 3.794126642578616*^9}, 3.794126673677371*^9, {
+   3.7941267119051456`*^9, 3.7941267361952815`*^9}, 3.7941267691599936`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(Im[\\(\\(\\(\\(0.25`\\\\ \
+k\\^2\\)\\) - \\(\\(1.`\\\\ a1\\\\ k\\^2\\)\\) + \\(\\(a1\\^2\\\\ k\\^2\\)\\)\
+\\)\\)]\\)\\) - 0}\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+must be a list of equalities or real-valued functions.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\
+\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126769307957*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(Im[\\(\\(\\(\\(0.25`\\\\ \
+k\\^2\\)\\) + \\(\\(1.`\\\\ a1\\\\ k\\^2\\)\\) + \\(\\(a1\\^2\\\\ k\\^2\\)\\)\
+\\)\\)]\\)\\) - 0}\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+must be a list of equalities or real-valued functions.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\
+\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941267693199625`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(Im[\\(\\(\\(\\(0.25`\\\\ \
+k\\^2\\)\\) - \\(\\(1.`\\\\ a1\\\\ k\\^2\\)\\) + \\(\\(a1\\^2\\\\ k\\^2\\)\\)\
+\\)\\)]\\)\\) - 0}\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+must be a list of equalities or real-valued functions.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\
+\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941267693279552`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941267693359723`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126836527994*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79412683654399*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126836563966*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126836563966*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79412687623342*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941268762454357`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941268762654114`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941268762654114`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126885028264*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126885044256*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941268850642695`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941268850682526`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269162039595`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126916215975*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269162359695`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126916239952*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269337215967`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79412693373359*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269337535877`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269337575893`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269438243217`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269438403177`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126943860312*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794126943860312*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269943231077`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269943387375`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269943699975`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941269943699975`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270118302307`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270118462067`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270118662033`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270118662033`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270317659664`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270317779818`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270317979584`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270317979584`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127061848012*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127061863634*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\) + \
+\\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\(\\(1.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270618792615`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941270618792615`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\\) - \
+\\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941274661655664`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\\) - \
+\\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941274661815825`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(3.`\\\\ a1\
+\\^2\\)\\) - a1\\^4 + \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\
+\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\\(\\(Im[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\) - 0\\)\\)}\\), \\\"MT\\\"]\\)\
+\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of equalities or \
+real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\
+\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127466201558*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127466205556*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-17.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(12.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(16\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(\\(\\(-\\(\\(a1\\^2\\/2\\)\\)\\)\\) + \\(\\(1.`\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\
+\\)\\)]\\)\\)\\)\\) + \\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \
+\\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941276585335817`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-17.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(12.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(16\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(\\(\\(-\\(\\(a1\\^2\\/2\\)\\)\\)\\) + \\(\\(1.`\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\
+\\)\\)]\\)\\)\\)\\) + \\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \
+\\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127658545596*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-17.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(12.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(16\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\
+\\(-2\\)\\)\\\\ a1\\^2\\)\\) + \\(\\(4.`\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\) - \\(\\(\\@2\\\\ \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 5 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\"MT\\\"]\\)\
+\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of equalities or \
+real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\
+\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127658565591*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941276585735703`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-3.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(\\(\\(-\\(\\(a1\\^2\\/2\\)\\)\\)\\) + \\(\\(1.`\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\
+\\)\\)]\\)\\)\\)\\) + \\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \
+\\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79412769662317*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-3.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(\\(\\(-\\(\\(a1\\^2\\/2\\)\\)\\)\\) + \\(\\(1.`\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\
+\\)\\)]\\)\\)\\)\\) + \\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \
+\\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127696639166*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-3.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\\(\\(Im[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\) - 0\\)\\)}\\), \\\"MT\\\"]\\)\
+\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of equalities or \
+real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\
+\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127696659142*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127696659142*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-3.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(\\(\\(-\\(\\(a1\\^2\\/2\\)\\)\\)\\) + \\(\\(1.`\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\
+\\)\\)]\\)\\)\\)\\) + \\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \
+\\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127715816846*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-3.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(\\(\\(-\\(\\(a1\\^2\\/2\\)\\)\\)\\) + \\(\\(1.`\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\
+\\)\\)]\\)\\)\\)\\) + \\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \
+\[RightSkeleton]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \
+\\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794127715832842*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(\\(\\(-3.`\
+\\)\\)\\\\ a1\\^2\\)\\) - a1\\^4 - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(1.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\\(\\(Im[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\) - 0\\)\\)}\\), \\\"MT\\\"]\\)\
+\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of equalities or \
+real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\
+\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941277158528376`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941277158528376`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(12.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \
+\\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(a1\\^4\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\\) - \
+\\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+1 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941283615081882`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(12.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \
+\\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ \
+k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\\\ \
+\\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\\ a1\\^4\\\\ \
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) - \\(\\(4.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[\\(\\(3\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(a1\\^4\\\\ \
+\\(\\(Cos[\\(\\(4\\\\ k\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\\) - \
+\\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+1 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941283615202017`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+must be a list of equalities or real-valued functions.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\
+\\\", ButtonNote -> \\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941283615401773`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941283615401773`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(40.`\\\\ B\\^2\\)\\) + \\(\\(12.`\\\\ \
+a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(32.`\\\\ B\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\
+\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + B\\^2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\
+\\) - \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 4 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+3 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.794128510227679*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(40.`\\\\ B\\^2\\)\\) + \\(\\(12.`\\\\ \
+a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(32.`\\\\ B\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\
+\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + B\\^2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\
+\\) - \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 4 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+3 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285102433043`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(40.`\\\\ B\\^2\\)\\) + \\(\\(12.`\\\\ \
+a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(32.`\\\\ B\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\
+\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\\(\\(Im[\\(\\(\\(\\(2\\\
+\\ a1\\^2\\)\\) + \\(\\(\[LeftSkeleton] 6 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) \
+- 0\\)\\)}\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be \
+a list of equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285102794466`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285102834473`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(40.`\\\\ B\\^2\\)\\) + \\(\\(12.`\\\\ \
+a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(32.`\\\\ B\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\
+\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + B\\^2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\
+\\) - \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 4 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+3 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285265510883`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(40.`\\\\ B\\^2\\)\\) + \\(\\(12.`\\\\ \
+a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(32.`\\\\ B\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\
+\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \
+\\(\\(\\(\\(Im[\\(\\(a1\\^2\\/2 + B\\^2 + \\(\\(1.`\\\\ \\(\\(Cos[k]\\)\\)\\)\
+\\) - \\(\\(1\\/2\\\\ a1\\^2\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \
+\\@\\(\\(\\(-4.`\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\
+\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] 7 \[RightSkeleton]\\)\\) + \\(\\(Times[\
+\\(\\(\[LeftSkeleton] 4 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(\[LeftSkeleton] \
+3 \[RightSkeleton]\\)\\)\\)\\/\\(2\\\\ \\@2\\)\\)\\)]\\)\\) - 0\\)\\)}\\), \\\
+\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be a list of \
+equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285265666943`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "::", "\<\"exclul\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\(\\(\\(\\(Im[\\(\\(\\(\\(20.`\\\\ \
+a1\\^2\\)\\) - a1\\^4 + \\(\\(40.`\\\\ B\\^2\\)\\) + \\(\\(12.`\\\\ \
+a1\\^2\\\\ \\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(32.`\\\\ B\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\)\\) + \\(\\(8.`\\\\ \\(Cos[k]\\)\\^2\\)\\) - \\(\\(4.`\\\
+\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(20.`\\\\ a1\\^2\\\\ \\(\
+\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) - \\(\\(8.`\\\\ a1\\^2\\\\ \
+\\(\\(Cos[k]\\)\\)\\\\ \\(\\(Cos[\\(\\(2\\\\ k\\)\\)]\\)\\)\\)\\) + \\(\\(2\\\
+\\ a1\\^4\\\\ \\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\^2\\)\\) + \\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)\\)\\)]\\)\\) - 0\\)\\), \\(\\(\\(\\(Im[\\(\\(\\(\\(2\\\
+\\ a1\\^2\\)\\) + \\(\\(\[LeftSkeleton] 6 \[RightSkeleton]\\)\\)\\)\\)]\\)\\) \
+- 0\\)\\)}\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" must be \
+a list of equalities or real-valued functions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285265823193`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\
+\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Plot :: \
+\\\"exclul\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+will be suppressed during this calculation.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7941285265979404`*^9}]
+}, Open  ]]
+},
+WindowSize->{607, 514},
+WindowMargins->{{Automatic, 337}, {Automatic, 39}},
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 3643, 107, 332, "Input"],
+Cell[4213, 131, 1667, 48, 90, "Output"],
+Cell[5883, 181, 1943, 38, 310, "Output"],
+Cell[7829, 221, 261, 3, 30, "Output"],
+Cell[8093, 226, 21308, 359, 238, "Output"],
+Cell[29404, 587, 652, 12, 45, "Message"],
+Cell[30059, 601, 654, 12, 45, "Message"],
+Cell[30716, 615, 654, 12, 45, "Message"],
+Cell[31373, 629, 630, 11, 21, "Message"],
+Cell[32006, 642, 1200, 20, 86, "Message"],
+Cell[33209, 664, 1199, 20, 86, "Message"],
+Cell[34411, 686, 1200, 20, 86, "Message"],
+Cell[35614, 708, 628, 11, 21, "Message"],
+Cell[36245, 721, 1199, 20, 86, "Message"],
+Cell[37447, 743, 1202, 20, 86, "Message"],
+Cell[38652, 765, 1202, 20, 86, "Message"],
+Cell[39857, 787, 630, 11, 21, "Message"],
+Cell[40490, 800, 1200, 20, 86, "Message"],
+Cell[41693, 822, 1200, 20, 86, "Message"],
+Cell[42896, 844, 1202, 20, 86, "Message"],
+Cell[44101, 866, 630, 11, 21, "Message"],
+Cell[44734, 879, 1202, 20, 86, "Message"],
+Cell[45939, 901, 1200, 20, 86, "Message"],
+Cell[47142, 923, 1202, 20, 86, "Message"],
+Cell[48347, 945, 628, 11, 21, "Message"],
+Cell[48978, 958, 1202, 20, 86, "Message"],
+Cell[50183, 980, 1199, 20, 86, "Message"],
+Cell[51385, 1002, 1202, 20, 86, "Message"],
+Cell[52590, 1024, 630, 11, 21, "Message"],
+Cell[53223, 1037, 1202, 20, 86, "Message"],
+Cell[54428, 1059, 1202, 20, 86, "Message"],
+Cell[55633, 1081, 1200, 20, 86, "Message"],
+Cell[56836, 1103, 628, 11, 21, "Message"],
+Cell[57467, 1116, 1202, 20, 86, "Message"],
+Cell[58672, 1138, 1202, 20, 86, "Message"],
+Cell[59877, 1160, 1202, 20, 86, "Message"],
+Cell[61082, 1182, 630, 11, 21, "Message"],
+Cell[61715, 1195, 1202, 20, 86, "Message"],
+Cell[62920, 1217, 1202, 20, 86, "Message"],
+Cell[64125, 1239, 1202, 20, 86, "Message"],
+Cell[65330, 1261, 630, 11, 21, "Message"],
+Cell[65963, 1274, 1202, 20, 86, "Message"],
+Cell[67168, 1296, 1202, 20, 86, "Message"],
+Cell[68373, 1318, 1202, 20, 86, "Message"],
+Cell[69578, 1340, 630, 11, 21, "Message"],
+Cell[70211, 1353, 1200, 20, 86, "Message"],
+Cell[71414, 1375, 1200, 20, 86, "Message"],
+Cell[72617, 1397, 1202, 20, 86, "Message"],
+Cell[73822, 1419, 630, 11, 21, "Message"],
+Cell[74455, 1432, 1702, 27, 160, "Message"],
+Cell[76160, 1461, 1702, 27, 160, "Message"],
+Cell[77865, 1490, 1320, 22, 92, "Message"],
+Cell[79188, 1514, 628, 11, 21, "Message"],
+Cell[79819, 1527, 1743, 28, 178, "Message"],
+Cell[81565, 1557, 1741, 28, 178, "Message"],
+Cell[83309, 1587, 1862, 30, 133, "Message"],
+Cell[85174, 1619, 630, 11, 21, "Message"],
+Cell[85807, 1632, 1739, 28, 178, "Message"],
+Cell[87549, 1662, 1740, 28, 178, "Message"],
+Cell[89292, 1692, 1333, 22, 92, "Message"],
+Cell[90628, 1716, 628, 11, 21, "Message"],
+Cell[91259, 1729, 1740, 28, 178, "Message"],
+Cell[93002, 1759, 1740, 28, 178, "Message"],
+Cell[94745, 1789, 1335, 22, 92, "Message"],
+Cell[96083, 1813, 630, 11, 21, "Message"],
+Cell[96716, 1826, 1646, 26, 160, "Message"],
+Cell[98365, 1854, 1646, 26, 160, "Message"],
+Cell[100014, 1882, 557, 10, 21, "Message"],
+Cell[100574, 1894, 630, 11, 21, "Message"],
+Cell[101207, 1907, 1650, 26, 160, "Message"],
+Cell[102860, 1935, 1652, 26, 160, "Message"],
+Cell[104515, 1963, 1303, 21, 109, "Message"],
+Cell[105821, 1986, 630, 11, 21, "Message"],
+Cell[106454, 1999, 1652, 26, 160, "Message"],
+Cell[108109, 2027, 1652, 26, 160, "Message"],
+Cell[109764, 2055, 1303, 21, 109, "Message"],
+Cell[111070, 2078, 630, 11, 21, "Message"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

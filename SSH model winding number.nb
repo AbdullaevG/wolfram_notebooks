@@ -1,0 +1,1054 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     44776,       1044]
+NotebookOptionsPosition[     44284,       1023]
+NotebookOutlinePosition[     44628,       1038]
+CellTagsIndexPosition[     44585,       1035]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t1", ":=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dx", "[", 
+    RowBox[{"x_", ",", "t2_", ",", "t3_"}], "]"}], ":=", 
+   RowBox[{"t1", "+", 
+    RowBox[{"t2", "*", 
+     RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+    RowBox[{"t3", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"2", "*", "x"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dy", "[", 
+    RowBox[{"x_", ",", "t2_", ",", "t3_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"t2", "*", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "+", 
+    RowBox[{"t3", "*", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "*", "x"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"dx", "[", 
+        RowBox[{"x", ",", "t2", ",", "t3"}], "]"}], ",", 
+       RowBox[{"dy", "[", 
+        RowBox[{"x", ",", "t2", ",", "t3"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "->", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Green"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t2", ",", "0", ",", "1.1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t3", ",", "0", ",", "1.8"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.789473727463607*^9, 3.7894738514000673`*^9}, {
+  3.7894738984784746`*^9, 3.7894739265721235`*^9}, {3.7894739884464016`*^9, 
+  3.7894740268992977`*^9}, {3.789474133161174*^9, 3.789474310962782*^9}, {
+  3.7894756652072678`*^9, 3.7894757492780733`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t2$$ = 0, $CellContext`t3$$ = 1.8, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t2$$], 0, 1.1}, {
+      Hold[$CellContext`t3$$], 0, 1.8}}, Typeset`size$$ = {
+    360., {107., 111.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`t2$15515$$ = 
+    0, $CellContext`t3$15516$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`t2$$ = 0, $CellContext`t3$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t2$$, $CellContext`t2$15515$$, 0], 
+        Hold[$CellContext`t3$$, $CellContext`t3$15516$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`dx[$CellContext`x, $CellContext`t2$$, \
+$CellContext`t3$$], 
+         $CellContext`dy[$CellContext`x, $CellContext`t2$$, \
+$CellContext`t3$$]}, {$CellContext`x, 0, 2 Pi}, PlotStyle -> {Red, Green}], 
+      "Specifications" :> {{$CellContext`t2$$, 0, 1.1}, {$CellContext`t3$$, 0,
+          1.8}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{642., {138., 143.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7894738335103393`*^9, {3.78947390470574*^9, 3.7894739273551736`*^9}, {
+   3.789474007269272*^9, 3.7894740274617596`*^9}, {3.789474133739279*^9, 
+   3.78947414884182*^9}, {3.789474272463066*^9, 3.789474311493947*^9}, {
+   3.789475732211838*^9, 3.7894757509750814`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", " ", 
+    RowBox[{
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "p1", ",", "p2", ",", "k", ",", "coords", ",", "coords1", ",", "pts", 
+         ",", "pts1", ",", "l", ",", "l1", ",", "txt1", ",", "txt2", ",", 
+         "txt3", ",", "arr1", ",", "ell1", ",", "g1"}], "}"}], ",", 
+       RowBox[{"(*", " ", 
+        RowBox[{"SSH", " ", "model", " ", "chain", " ", "graphics"}], " ", 
+        "*)"}], " ", 
+       RowBox[{
+        RowBox[{"coords", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "i"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "0", ",", "3", ",", "1"}], "}"}]}], "]"}]}], 
+        ";", 
+        RowBox[{"coords1", "=", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.5"}], ",", "0.5"}], "}"}], "+", "#"}], "&"}], 
+           ",", "coords"}], "]"}]}], ";", "\n", "    ", 
+        RowBox[{"l", "=", 
+         RowBox[{"{", 
+          RowBox[{"Thick", ",", "Black", ",", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"coords", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", 
+                RowBox[{"coords1", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "4", ",", "1"}], "}"}]}], "]"}]}], 
+          "}"}]}], ";", 
+        RowBox[{"l1", "=", 
+         RowBox[{"{", 
+          RowBox[{"Thick", ",", "Dashed", ",", 
+           RowBox[{"Hue", "[", "0.05", "]"}], ",", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"coords1", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", 
+                RowBox[{"coords", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", "+", "1"}], "]"}], "]"}]}], "}"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "3", ",", "1"}], "}"}]}], "]"}]}], 
+          "}"}]}], ";", 
+        RowBox[{"pts", "=", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", 
+           RowBox[{"PointSize", "[", "0.2", "]"}], ",", 
+           RowBox[{"Point", "[", "coords", "]"}]}], "}"}]}], " ", ";", 
+        RowBox[{"pts1", "=", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", 
+           RowBox[{"PointSize", "[", "0.2", "]"}], ",", 
+           RowBox[{"Point", "[", "coords1", "]"}]}], "}"}]}], ";", " ", 
+        RowBox[{"txt1", "=", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<\!\(\*SubscriptBox[\(t\), \(1\)]\)\>\"", ",", "Black", ",", 
+             "16"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.15"}], ",", "1.35"}], "}"}]}], "]"}]}], ";", " ", 
+        RowBox[{"txt2", "=", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<\!\(\*SubscriptBox[\(t\), \(2\)]\)\>\"", ",", 
+             RowBox[{"Hue", "[", "0.05", "]"}], ",", "16"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.35"}], ",", "1.9"}], "}"}]}], "]"}]}], ";", " ", 
+        RowBox[{"txt3", "=", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<\!\(\*SubscriptBox[\(t\), \(3\)]\)\>\"", ",", "Blue", ",", 
+             "16"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.8"}], ",", "3."}], "}"}]}], "]"}]}], ";", " ", 
+        RowBox[{"arr1", "=", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.45"}], ",", "3"}], "}"}], ",", "0.5", ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Pi", "/", "2"}], "+", 
+                RowBox[{"Pi", "/", "6"}]}], ",", 
+               RowBox[{
+                RowBox[{"3", 
+                 RowBox[{"Pi", "/", "2"}]}], "-", 
+                RowBox[{"Pi", "/", "6"}]}]}], "}"}]}], "]"}]}], "}"}]}], ";", 
+        " ", 
+        RowBox[{"ell1", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Yellow", ",", 
+             RowBox[{"Rotate", "[", 
+              RowBox[{
+               RowBox[{"Disk", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "0.25"}], ",", 
+                   RowBox[{"0.25", "+", "n"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.5", ",", "0.3"}], "}"}]}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"Pi", "/", "4"}], "+", 
+                RowBox[{"Pi", "/", "2"}]}]}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"n", ",", "0", ",", "3", ",", "1"}], "}"}]}], "]"}]}], 
+        ";", " ", 
+        RowBox[{"g1", "=", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{"{", 
+           RowBox[{
+           "ell1", ",", "l", ",", "l1", ",", "pts", ",", "pts1", ",", "txt1", 
+            ",", "txt2", ",", "txt3", ",", "arr1"}], "}"}], "]"}]}], ";", 
+        RowBox[{"(*", " ", 
+         RowBox[{"SSH", " ", "model", " ", "picture"}], " ", "*)"}], " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "plot", " ", "of", "  ", "energy", " ", "dispersion", " ", 
+          "relation"}], " ", "*)"}], " ", 
+        RowBox[{"p1", "=", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Ep", "[", 
+              RowBox[{"k", ",", "t1", ",", "t2", ",", "t3"}], "]"}], ",", 
+             RowBox[{"En", "[", 
+              RowBox[{"k", ",", "t1", ",", "t2", ",", "t3"}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"k", ",", 
+             RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}], ",", 
+           RowBox[{"Frame", "->", "True"}], ",", 
+           RowBox[{"PlotStyle", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"Thick", ",", "Red"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Thick", ",", "Red"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "2.75"}], ",", "2.75"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"FrameTicks", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], ",", 
+                  RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2"}], "}"}], 
+                ",", "None"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "Pi"}], ",", "0", ",", "Pi"}], "}"}], ",", 
+                "None"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"FrameLabel", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<E\>\"", ",", "Italic"}], "]"}], ",", 
+                   "\"\< (eV)\>\""}], "}"}], "]"}], ",", "None"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"k", ",", "\"\<energy\>\""}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"LabelStyle", "->", 
+            RowBox[{"Directive", "[", 
+             RowBox[{"Black", ",", "14"}], "]"}]}], ",", 
+           RowBox[{"AspectRatio", "->", "1"}], ",", 
+           RowBox[{"ImageSize", "->", 
+            RowBox[{"{", 
+             RowBox[{"80", ",", "80"}], "}"}]}]}], "]"}]}], ";", " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{"plot", " ", "of", " ", "Hamiltonian", " ", "winding"}], " ",
+          "*)"}], " ", 
+        RowBox[{"p2", "=", 
+         RowBox[{"ParametricPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"t1", "+", 
+              RowBox[{"t2", "*", 
+               RowBox[{"Cos", "[", "k", "]"}]}], "+", 
+              RowBox[{"t3", "*", 
+               RowBox[{"Cos", "[", 
+                RowBox[{"2", "*", "k"}], "]"}]}]}], ",", 
+             RowBox[{
+              RowBox[{"t2", "*", 
+               RowBox[{"Sin", "[", "k", "]"}]}], "+", 
+              RowBox[{"t3", "*", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"2", "*", "k"}], "]"}]}]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"k", ",", 
+             RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}], ",", 
+           RowBox[{"Frame", "->", " ", "True"}], ",", 
+           RowBox[{"Axes", "->", " ", "True"}], ",", 
+           RowBox[{"AxesOrigin", "->", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+           RowBox[{"FrameTicks", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], ",", 
+                  RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2"}], "}"}], 
+                ",", "None"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "3"}], ",", 
+                  RowBox[{"-", "2"}], ",", 
+                  RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                  "3"}], "}"}], ",", "None"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"FrameLabel", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<\!\(\*SubscriptBox[\(h\), \(y\)]\)(\>\"", ",", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<k\>\"", ",", "Italic"}], "]"}], ",", 
+                   "\"\<)\>\""}], "}"}], "]"}], ",", "None"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<\!\(\*SubscriptBox[\(h\), \(x\)]\)(\>\"", ",", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<k\>\"", ",", "Italic"}], "]"}], ",", 
+                   "\"\<)\>\""}], "}"}], "]"}], ",", "\"\<winding\>\""}], 
+               "}"}]}], "}"}]}], ",", 
+           RowBox[{"PlotStyle", "->", 
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Purple"}], "}"}]}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "3"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1.5"}], ",", "1.5"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"LabelStyle", "->", 
+            RowBox[{"Directive", "[", 
+             RowBox[{"Black", ",", "14"}], "]"}]}], ",", 
+           RowBox[{"AspectRatio", "->", "Automatic"}], ",", 
+           RowBox[{"ImageSize", "->", 
+            RowBox[{"{", 
+             RowBox[{"80", ",", "80"}], "}"}]}]}], "]"}]}], ";", " ", 
+        RowBox[{"Show", "[", 
+         RowBox[{"GraphicsGrid", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"p1", ",", "g1"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"p2", ",", "SpanFromAbove"}], "}"}]}], "}"}], ",", 
+           RowBox[{"ImageSize", "->", 
+            RowBox[{"{", 
+             RowBox[{"500", ",", "400"}], "}"}]}], ",", 
+           RowBox[{"Spacings", "->", 
+            RowBox[{"{", 
+             RowBox[{"0.5", ",", "0.25"}], "}"}]}], ",", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], "]"}]}]}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t1", ",", "0.5", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<intracell hopping \>\"", ",", 
+            RowBox[{"Subscript", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<t\>\"", ",", "Italic"}], "]"}], ",", "1"}], 
+             "]"}]}], "}"}], "]"}]}], "}"}], ",", "0.", ",", "1.0", ",", 
+       "0.1", ",", 
+       RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t2", ",", "0.5", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<intercell hopping \>\"", ",", 
+            RowBox[{"Subscript", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<t\>\"", ",", "Italic"}], "]"}], ",", "2"}], 
+             "]"}]}], "}"}], "]"}]}], "}"}], ",", "0.", ",", "1.0", ",", 
+       "0.1", ",", 
+       RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t3", ",", "0.0", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<nearest neighbor hopping \>\"", ",", 
+            RowBox[{"Subscript", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<t\>\"", ",", "Italic"}], "]"}], ",", "3"}], 
+             "]"}]}], "}"}], "]"}]}], "}"}], ",", "0.0", ",", "0.5", ",", 
+       "0.05", ",", 
+       RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", " ", 
+     RowBox[{"TrackedSymbols", ":>", 
+      RowBox[{"{", 
+       RowBox[{"t1", ",", "t2", ",", "t3"}], "}"}]}], ",", " ", 
+     RowBox[{"Initialization", ":>", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Ep", "[", 
+          RowBox[{"kk_", ",", "tt1_", ",", "tt2_", ",", "tt3_"}], "]"}], ":=", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"tt1", "+", 
+              RowBox[{"tt2", "*", 
+               RowBox[{"Cos", "[", "kk", "]"}]}], "+", 
+              RowBox[{"tt3", "*", 
+               RowBox[{"Cos", "[", 
+                RowBox[{"2", "*", "kk"}], "]"}]}]}], ")"}], "^", "2"}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"tt2", "*", 
+               RowBox[{"Sin", "[", "kk", "]"}]}], "+", 
+              RowBox[{"tt3", "*", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"2", "*", "kk"}], "]"}]}]}], ")"}], "^", "2"}]}], 
+          "]"}]}], ";", 
+        RowBox[{
+         RowBox[{"En", "[", 
+          RowBox[{"kk_", ",", "tt1_", ",", "tt2_", ",", "tt3_"}], "]"}], ":=", 
+         RowBox[{"-", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"tt1", "+", 
+               RowBox[{"tt2", "*", 
+                RowBox[{"Cos", "[", "kk", "]"}]}], "+", 
+               RowBox[{"tt3", "*", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"2", "*", "kk"}], "]"}]}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"tt2", "*", 
+                RowBox[{"Sin", "[", "kk", "]"}]}], "+", 
+               RowBox[{"tt3", "*", 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"2", "*", "kk"}], "]"}]}]}], ")"}], "^", "2"}]}], 
+           "]"}]}]}], ";"}], ")"}]}]}], "]"}], "\n", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`t1$$ = 
+      0.7000000000000001, $CellContext`t2$$ = 
+      0.7000000000000001, $CellContext`t3$$ = 0.5, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`t1$$], 0.5, 
+         Row[{"intracell hopping ", 
+           Subscript[
+            Style["t", Italic], 1]}]}, 0., 1., 0.1}, {{
+         Hold[$CellContext`t2$$], 0.5, 
+         Row[{"intercell hopping ", 
+           Subscript[
+            Style["t", Italic], 2]}]}, 0., 1., 0.1}, {{
+         Hold[$CellContext`t3$$], 0., 
+         Row[{"nearest neighbor hopping ", 
+           Subscript[
+            Style["t", Italic], 3]}]}, 0., 0.5, 0.05}}, Typeset`size$$ = {
+      500., {198., 202.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = False, $CellContext`t1$26725$$ = 
+      0, $CellContext`t2$26726$$ = 0, $CellContext`t3$26727$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, 
+        "Variables" :> {$CellContext`t1$$ = 0.5, $CellContext`t2$$ = 
+          0.5, $CellContext`t3$$ = 0.}, "ControllerVariables" :> {
+          Hold[$CellContext`t1$$, $CellContext`t1$26725$$, 0], 
+          Hold[$CellContext`t2$$, $CellContext`t2$26726$$, 0], 
+          Hold[$CellContext`t3$$, $CellContext`t3$26727$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+        Block[{$CellContext`p1, $CellContext`p2, $CellContext`k, \
+$CellContext`coords, $CellContext`coords1, $CellContext`pts, \
+$CellContext`pts1, $CellContext`l, $CellContext`l1, $CellContext`txt1, \
+$CellContext`txt2, $CellContext`txt3, $CellContext`arr1, $CellContext`ell1, \
+$CellContext`g1}, $CellContext`coords = 
+           Table[{0, $CellContext`i}, {$CellContext`i, 0, 3, 
+              1}]; $CellContext`coords1 = 
+           Map[{-0.5, 0.5} + #& , $CellContext`coords]; $CellContext`l = {
+            Thick, Black, 
+             Table[
+              Line[{
+                Part[$CellContext`coords, $CellContext`i], 
+                Part[$CellContext`coords1, $CellContext`i]}], {$CellContext`i,
+                1, 4, 1}]}; $CellContext`l1 = {Thick, Dashed, 
+             Hue[0.05], 
+             Table[
+              Line[{
+                Part[$CellContext`coords1, $CellContext`i], 
+                
+                Part[$CellContext`coords, $CellContext`i + 
+                 1]}], {$CellContext`i, 1, 3, 1}]}; $CellContext`pts = {Red, 
+             PointSize[0.2], 
+             Point[$CellContext`coords]}; $CellContext`pts1 = {Blue, 
+             PointSize[0.2], 
+             Point[$CellContext`coords1]}; $CellContext`txt1 = Text[
+             Style["\!\(\*SubscriptBox[\(t\), \(1\)]\)", Black, 16], {-0.15, 
+             1.35}]; $CellContext`txt2 = Text[
+             Style["\!\(\*SubscriptBox[\(t\), \(2\)]\)", 
+              Hue[0.05], 16], {-0.35, 1.9}]; $CellContext`txt3 = Text[
+             Style["\!\(\*SubscriptBox[\(t\), \(3\)]\)", Blue, 16], {-0.8, 
+             3.}]; $CellContext`arr1 = {Blue, 
+             
+             Circle[{-0.45, 3}, 0.5, {
+              Pi/2 + Pi/6, 3 (Pi/2) - Pi/6}]}; $CellContext`ell1 = 
+           Table[{Yellow, 
+              Rotate[
+               Disk[{-0.25, 0.25 + $CellContext`n}, {0.5, 0.3}], Pi/4 + 
+               Pi/2]}, {$CellContext`n, 0, 3, 1}]; $CellContext`g1 = 
+           Graphics[{$CellContext`ell1, $CellContext`l, $CellContext`l1, \
+$CellContext`pts, $CellContext`pts1, $CellContext`txt1, $CellContext`txt2, \
+$CellContext`txt3, $CellContext`arr1}]; $CellContext`p1 = Plot[{
+              $CellContext`Ep[$CellContext`k, $CellContext`t1$$, \
+$CellContext`t2$$, $CellContext`t3$$], 
+              $CellContext`En[$CellContext`k, $CellContext`t1$$, \
+$CellContext`t2$$, $CellContext`t3$$]}, {$CellContext`k, -Pi, Pi}, Frame -> 
+             True, PlotStyle -> {{Thick, Red}, {Thick, Red}}, 
+             PlotRange -> {{-Pi, Pi}, {-2.75, 2.75}}, 
+             FrameTicks -> {{{-2, -1, 0, 1, 2}, None}, {{-Pi, 0, Pi}, None}}, 
+             FrameLabel -> {{
+                Row[{
+                  Style["E", Italic], " (eV)"}], None}, {$CellContext`k, 
+                "energy"}}, LabelStyle -> Directive[Black, 14], AspectRatio -> 
+             1, ImageSize -> {80, 80}]; $CellContext`p2 = 
+           ParametricPlot[{$CellContext`t1$$ + $CellContext`t2$$ 
+               Cos[$CellContext`k] + $CellContext`t3$$ 
+               Cos[2 $CellContext`k], $CellContext`t2$$ 
+               Sin[$CellContext`k] + $CellContext`t3$$ 
+               Sin[2 $CellContext`k]}, {$CellContext`k, -Pi, Pi}, Frame -> 
+             True, Axes -> True, AxesOrigin -> {0, 0}, 
+             FrameTicks -> {{{-2, -1, 0, 1, 2}, None}, {{-3, -2, -1, 0, 1, 2, 
+                3}, None}}, FrameLabel -> {{
+                Row[{"\!\(\*SubscriptBox[\(h\), \(y\)]\)(", 
+                  Style["k", Italic], ")"}], None}, {
+                Row[{"\!\(\*SubscriptBox[\(h\), \(x\)]\)(", 
+                  Style["k", Italic], ")"}], "winding"}}, 
+             PlotStyle -> {Thick, Purple}, 
+             PlotRange -> {{-1, 3}, {-1.5, 1.5}}, LabelStyle -> 
+             Directive[Black, 14], AspectRatio -> Automatic, 
+             ImageSize -> {80, 80}]; Show[
+            
+            GraphicsGrid[{{$CellContext`p1, $CellContext`g1}, \
+{$CellContext`p2, SpanFromAbove}}, ImageSize -> {500, 400}, 
+             Spacings -> {0.5, 0.25}, Alignment -> Right]]], 
+        "Specifications" :> {{{$CellContext`t1$$, 0.5, 
+            Row[{"intracell hopping ", 
+              Subscript[
+               Style["t", Italic], 1]}]}, 0., 1., 0.1, Appearance -> 
+           "Labeled"}, {{$CellContext`t2$$, 0.5, 
+            Row[{"intercell hopping ", 
+              Subscript[
+               Style["t", Italic], 2]}]}, 0., 1., 0.1, Appearance -> 
+           "Labeled"}, {{$CellContext`t3$$, 0., 
+            Row[{"nearest neighbor hopping ", 
+              Subscript[
+               Style["t", Italic], 3]}]}, 0., 0.5, 0.05, Appearance -> 
+           "Labeled"}}, 
+        "Options" :> {
+         TrackedSymbols :> {$CellContext`t1$$, $CellContext`t2$$, \
+$CellContext`t3$$}}, "DefaultOptions" :> {ControllerLinking -> True}],
+       ImageSizeCache->{969., {229., 234.}},
+       SingleEvaluation->True],
+      UndoTrackedVariables :> {Typeset`show$$, Typeset`bookmarkMode$$},
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      Initialization:>(($CellContext`Ep[
+           Pattern[$CellContext`kk, 
+            Blank[]], 
+           Pattern[$CellContext`tt1, 
+            Blank[]], 
+           Pattern[$CellContext`tt2, 
+            Blank[]], 
+           Pattern[$CellContext`tt3, 
+            Blank[]]] := 
+         Sqrt[($CellContext`tt1 + $CellContext`tt2 
+              Cos[$CellContext`kk] + $CellContext`tt3 
+              Cos[2 $CellContext`kk])^2 + ($CellContext`tt2 
+              Sin[$CellContext`kk] + $CellContext`tt3 
+              Sin[2 $CellContext`kk])^2]; $CellContext`En[
+           Pattern[$CellContext`kk, 
+            Blank[]], 
+           Pattern[$CellContext`tt1, 
+            Blank[]], 
+           Pattern[$CellContext`tt2, 
+            Blank[]], 
+           Pattern[$CellContext`tt3, 
+            Blank[]]] := -
+          Sqrt[($CellContext`tt1 + $CellContext`tt2 
+               Cos[$CellContext`kk] + $CellContext`tt3 
+               Cos[2 $CellContext`kk])^2 + ($CellContext`tt2 
+               Sin[$CellContext`kk] + $CellContext`tt3 
+               Sin[2 $CellContext`kk])^2]; Null); Typeset`initDone$$ = True),
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]]}]}]], "Input",
+ CellChangeTimes->{{3.7894755343583364`*^9, 3.7894755430083923`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t1$$ = 0.5, $CellContext`t2$$ = 
+    0.5, $CellContext`t3$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t1$$], 0.5, 
+       Row[{"intracell hopping ", 
+         Subscript[
+          Style["t", Italic], 1]}]}, 0., 1., 0.1}, {{
+       Hold[$CellContext`t2$$], 0.5, 
+       Row[{"intercell hopping ", 
+         Subscript[
+          Style["t", Italic], 2]}]}, 0., 1., 0.1}, {{
+       Hold[$CellContext`t3$$], 0., 
+       Row[{"nearest neighbor hopping ", 
+         Subscript[
+          Style["t", Italic], 3]}]}, 0., 0.5, 0.05}}, Typeset`size$$ = {
+    500., {198., 202.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`t1$15699$$ = 
+    0, $CellContext`t2$15700$$ = 0, $CellContext`t3$15701$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`t1$$ = 0.5, $CellContext`t2$$ = 
+        0.5, $CellContext`t3$$ = 0.}, "ControllerVariables" :> {
+        Hold[$CellContext`t1$$, $CellContext`t1$15699$$, 0], 
+        Hold[$CellContext`t2$$, $CellContext`t2$15700$$, 0], 
+        Hold[$CellContext`t3$$, $CellContext`t3$15701$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Block[{$CellContext`p1, $CellContext`p2, $CellContext`k, \
+$CellContext`coords, $CellContext`coords1, $CellContext`pts, \
+$CellContext`pts1, $CellContext`l, $CellContext`l1, $CellContext`txt1, \
+$CellContext`txt2, $CellContext`txt3, $CellContext`arr1, $CellContext`ell1, \
+$CellContext`g1}, $CellContext`coords = 
+         Table[{0, $CellContext`i}, {$CellContext`i, 0, 3, 
+            1}]; $CellContext`coords1 = 
+         Map[{-0.5, 0.5} + #& , $CellContext`coords]; $CellContext`l = {
+          Thick, Black, 
+           Table[
+            Line[{
+              Part[$CellContext`coords, $CellContext`i], 
+              Part[$CellContext`coords1, $CellContext`i]}], {$CellContext`i, 
+             1, 4, 1}]}; $CellContext`l1 = {Thick, Dashed, 
+           Hue[0.05], 
+           Table[
+            Line[{
+              Part[$CellContext`coords1, $CellContext`i], 
+              
+              Part[$CellContext`coords, $CellContext`i + 
+               1]}], {$CellContext`i, 1, 3, 1}]}; $CellContext`pts = {Red, 
+           PointSize[0.2], 
+           Point[$CellContext`coords]}; $CellContext`pts1 = {Blue, 
+           PointSize[0.2], 
+           Point[$CellContext`coords1]}; $CellContext`txt1 = Text[
+           Style["\!\(\*SubscriptBox[\(t\), \(1\)]\)", Black, 16], {-0.15, 
+           1.35}]; $CellContext`txt2 = Text[
+           Style["\!\(\*SubscriptBox[\(t\), \(2\)]\)", 
+            Hue[0.05], 16], {-0.35, 1.9}]; $CellContext`txt3 = Text[
+           Style["\!\(\*SubscriptBox[\(t\), \(3\)]\)", Blue, 16], {-0.8, 
+           3.}]; $CellContext`arr1 = {Blue, 
+           
+           Circle[{-0.45, 3}, 0.5, {
+            Pi/2 + Pi/6, 3 (Pi/2) - Pi/6}]}; $CellContext`ell1 = 
+         Table[{Yellow, 
+            Rotate[
+             Disk[{-0.25, 0.25 + $CellContext`n}, {0.5, 0.3}], Pi/4 + 
+             Pi/2]}, {$CellContext`n, 0, 3, 1}]; $CellContext`g1 = 
+         Graphics[{$CellContext`ell1, $CellContext`l, $CellContext`l1, \
+$CellContext`pts, $CellContext`pts1, $CellContext`txt1, $CellContext`txt2, \
+$CellContext`txt3, $CellContext`arr1}]; $CellContext`p1 = Plot[{
+            $CellContext`Ep[$CellContext`k, $CellContext`t1$$, \
+$CellContext`t2$$, $CellContext`t3$$], 
+            $CellContext`En[$CellContext`k, $CellContext`t1$$, \
+$CellContext`t2$$, $CellContext`t3$$]}, {$CellContext`k, -Pi, Pi}, Frame -> 
+           True, PlotStyle -> {{Thick, Red}, {Thick, Red}}, 
+           PlotRange -> {{-Pi, Pi}, {-2.75, 2.75}}, 
+           FrameTicks -> {{{-2, -1, 0, 1, 2}, None}, {{-Pi, 0, Pi}, None}}, 
+           FrameLabel -> {{
+              Row[{
+                Style["E", Italic], " (eV)"}], None}, {$CellContext`k, 
+              "energy"}}, LabelStyle -> Directive[Black, 14], AspectRatio -> 
+           1, ImageSize -> {80, 80}]; $CellContext`p2 = 
+         ParametricPlot[{$CellContext`t1$$ + $CellContext`t2$$ 
+             Cos[$CellContext`k] + $CellContext`t3$$ 
+             Cos[2 $CellContext`k], $CellContext`t2$$ 
+             Sin[$CellContext`k] + $CellContext`t3$$ 
+             Sin[2 $CellContext`k]}, {$CellContext`k, -Pi, Pi}, Frame -> True,
+            Axes -> True, AxesOrigin -> {0, 0}, 
+           FrameTicks -> {{{-2, -1, 0, 1, 2}, None}, {{-3, -2, -1, 0, 1, 2, 
+              3}, None}}, FrameLabel -> {{
+              Row[{"\!\(\*SubscriptBox[\(h\), \(y\)]\)(", 
+                Style["k", Italic], ")"}], None}, {
+              Row[{"\!\(\*SubscriptBox[\(h\), \(x\)]\)(", 
+                Style["k", Italic], ")"}], "winding"}}, 
+           PlotStyle -> {Thick, Purple}, PlotRange -> {{-1, 3}, {-1.5, 1.5}}, 
+           LabelStyle -> Directive[Black, 14], AspectRatio -> Automatic, 
+           ImageSize -> {80, 80}]; Show[
+          
+          GraphicsGrid[{{$CellContext`p1, $CellContext`g1}, {$CellContext`p2, 
+             SpanFromAbove}}, ImageSize -> {500, 400}, 
+           Spacings -> {0.5, 0.25}, Alignment -> Right]]], 
+      "Specifications" :> {{{$CellContext`t1$$, 0.5, 
+          Row[{"intracell hopping ", 
+            Subscript[
+             Style["t", Italic], 1]}]}, 0., 1., 0.1, Appearance -> 
+         "Labeled"}, {{$CellContext`t2$$, 0.5, 
+          Row[{"intercell hopping ", 
+            Subscript[
+             Style["t", Italic], 2]}]}, 0., 1., 0.1, Appearance -> 
+         "Labeled"}, {{$CellContext`t3$$, 0., 
+          Row[{"nearest neighbor hopping ", 
+            Subscript[
+             Style["t", Italic], 3]}]}, 0., 0.5, 0.05, Appearance -> 
+         "Labeled"}}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`t1$$, $CellContext`t2$$, \
+$CellContext`t3$$}}, "DefaultOptions" :> {}],
+     ImageSizeCache->{969., {229., 234.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`Ep[
+         Pattern[$CellContext`kk, 
+          Blank[]], 
+         Pattern[$CellContext`tt1, 
+          Blank[]], 
+         Pattern[$CellContext`tt2, 
+          Blank[]], 
+         Pattern[$CellContext`tt3, 
+          Blank[]]] := 
+       Sqrt[($CellContext`tt1 + $CellContext`tt2 
+            Cos[$CellContext`kk] + $CellContext`tt3 
+            Cos[2 $CellContext`kk])^2 + ($CellContext`tt2 
+            Sin[$CellContext`kk] + $CellContext`tt3 
+            Sin[2 $CellContext`kk])^2]; $CellContext`En[
+         Pattern[$CellContext`kk, 
+          Blank[]], 
+         Pattern[$CellContext`tt1, 
+          Blank[]], 
+         Pattern[$CellContext`tt2, 
+          Blank[]], 
+         Pattern[$CellContext`tt3, 
+          Blank[]]] := -
+        Sqrt[($CellContext`tt1 + $CellContext`tt2 
+             Cos[$CellContext`kk] + $CellContext`tt3 
+             Cos[2 $CellContext`kk])^2 + ($CellContext`tt2 
+             Sin[$CellContext`kk] + $CellContext`tt3 
+             Sin[2 $CellContext`kk])^2]; Null); Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7894757577182136`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t1$$ = 0.2, $CellContext`t2$$ = 
+    0.2, $CellContext`t3$$ = 0.45, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t1$$], 0.2, 
+       Row[{"intracell hopping ", 
+         Subscript[
+          Style["t", Italic], 1]}]}, 0., 1., 0.1}, {{
+       Hold[$CellContext`t2$$], 0.2, 
+       Row[{"intercell hopping ", 
+         Subscript[
+          Style["t", Italic], 2]}]}, 0., 1., 0.1}, {{
+       Hold[$CellContext`t3$$], 0.45, 
+       Row[{"nearest neighbor hopping ", 
+         Subscript[
+          Style["t", Italic], 3]}]}, 0., 0.5, 0.05}}, Typeset`size$$ = {
+    500., {198., 202.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`t1$15773$$ = 
+    0, $CellContext`t2$15774$$ = 0, $CellContext`t3$15775$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`t1$$ = 0.2, $CellContext`t2$$ = 
+        0.2, $CellContext`t3$$ = 0.45}, "ControllerVariables" :> {
+        Hold[$CellContext`t1$$, $CellContext`t1$15773$$, 0], 
+        Hold[$CellContext`t2$$, $CellContext`t2$15774$$, 0], 
+        Hold[$CellContext`t3$$, $CellContext`t3$15775$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Block[{$CellContext`p1, $CellContext`p2, $CellContext`k, \
+$CellContext`coords, $CellContext`coords1, $CellContext`pts, \
+$CellContext`pts1, $CellContext`l, $CellContext`l1, $CellContext`txt1, \
+$CellContext`txt2, $CellContext`txt3, $CellContext`arr1, $CellContext`ell1, \
+$CellContext`g1}, $CellContext`coords = 
+         Table[{0, $CellContext`i}, {$CellContext`i, 0, 3, 
+            1}]; $CellContext`coords1 = 
+         Map[{-0.5, 0.5} + #& , $CellContext`coords]; $CellContext`l = {
+          Thick, Black, 
+           Table[
+            Line[{
+              Part[$CellContext`coords, $CellContext`i], 
+              Part[$CellContext`coords1, $CellContext`i]}], {$CellContext`i, 
+             1, 4, 1}]}; $CellContext`l1 = {Thick, Dashed, 
+           Hue[0.05], 
+           Table[
+            Line[{
+              Part[$CellContext`coords1, $CellContext`i], 
+              
+              Part[$CellContext`coords, $CellContext`i + 
+               1]}], {$CellContext`i, 1, 3, 1}]}; $CellContext`pts = {Red, 
+           PointSize[0.2], 
+           Point[$CellContext`coords]}; $CellContext`pts1 = {Blue, 
+           PointSize[0.2], 
+           Point[$CellContext`coords1]}; $CellContext`txt1 = Text[
+           Style["\!\(\*SubscriptBox[\(t\), \(1\)]\)", Black, 16], {-0.15, 
+           1.35}]; $CellContext`txt2 = Text[
+           Style["\!\(\*SubscriptBox[\(t\), \(2\)]\)", 
+            Hue[0.05], 16], {-0.35, 1.9}]; $CellContext`txt3 = Text[
+           Style["\!\(\*SubscriptBox[\(t\), \(3\)]\)", Blue, 16], {-0.8, 
+           3.}]; $CellContext`arr1 = {Blue, 
+           
+           Circle[{-0.45, 3}, 0.5, {
+            Pi/2 + Pi/6, 3 (Pi/2) - Pi/6}]}; $CellContext`ell1 = 
+         Table[{Yellow, 
+            Rotate[
+             Disk[{-0.25, 0.25 + $CellContext`n}, {0.5, 0.3}], Pi/4 + 
+             Pi/2]}, {$CellContext`n, 0, 3, 1}]; $CellContext`g1 = 
+         Graphics[{$CellContext`ell1, $CellContext`l, $CellContext`l1, \
+$CellContext`pts, $CellContext`pts1, $CellContext`txt1, $CellContext`txt2, \
+$CellContext`txt3, $CellContext`arr1}]; $CellContext`p1 = Plot[{
+            $CellContext`Ep[$CellContext`k, $CellContext`t1$$, \
+$CellContext`t2$$, $CellContext`t3$$], 
+            $CellContext`En[$CellContext`k, $CellContext`t1$$, \
+$CellContext`t2$$, $CellContext`t3$$]}, {$CellContext`k, -Pi, Pi}, Frame -> 
+           True, PlotStyle -> {{Thick, Red}, {Thick, Red}}, 
+           PlotRange -> {{-Pi, Pi}, {-2.75, 2.75}}, 
+           FrameTicks -> {{{-2, -1, 0, 1, 2}, None}, {{-Pi, 0, Pi}, None}}, 
+           FrameLabel -> {{
+              Row[{
+                Style["E", Italic], " (eV)"}], None}, {$CellContext`k, 
+              "energy"}}, LabelStyle -> Directive[Black, 14], AspectRatio -> 
+           1, ImageSize -> {80, 80}]; $CellContext`p2 = 
+         ParametricPlot[{$CellContext`t1$$ + $CellContext`t2$$ 
+             Cos[$CellContext`k] + $CellContext`t3$$ 
+             Cos[2 $CellContext`k], $CellContext`t2$$ 
+             Sin[$CellContext`k] + $CellContext`t3$$ 
+             Sin[2 $CellContext`k]}, {$CellContext`k, -Pi, Pi}, Frame -> True,
+            Axes -> True, AxesOrigin -> {0, 0}, 
+           FrameTicks -> {{{-2, -1, 0, 1, 2}, None}, {{-3, -2, -1, 0, 1, 2, 
+              3}, None}}, FrameLabel -> {{
+              Row[{"\!\(\*SubscriptBox[\(h\), \(y\)]\)(", 
+                Style["k", Italic], ")"}], None}, {
+              Row[{"\!\(\*SubscriptBox[\(h\), \(x\)]\)(", 
+                Style["k", Italic], ")"}], "winding"}}, 
+           PlotStyle -> {Thick, Purple}, PlotRange -> {{-1, 3}, {-1.5, 1.5}}, 
+           LabelStyle -> Directive[Black, 14], AspectRatio -> Automatic, 
+           ImageSize -> {80, 80}]; Show[
+          
+          GraphicsGrid[{{$CellContext`p1, $CellContext`g1}, {$CellContext`p2, 
+             SpanFromAbove}}, ImageSize -> {500, 400}, 
+           Spacings -> {0.5, 0.25}, Alignment -> Right]]], 
+      "Specifications" :> {{{$CellContext`t1$$, 0.2, 
+          Row[{"intracell hopping ", 
+            Subscript[
+             Style["t", Italic], 1]}]}, 0., 1., 0.1, Appearance -> 
+         "Labeled"}, {{$CellContext`t2$$, 0.2, 
+          Row[{"intercell hopping ", 
+            Subscript[
+             Style["t", Italic], 2]}]}, 0., 1., 0.1, Appearance -> 
+         "Labeled"}, {{$CellContext`t3$$, 0.45, 
+          Row[{"nearest neighbor hopping ", 
+            Subscript[
+             Style["t", Italic], 3]}]}, 0., 0.5, 0.05, Appearance -> 
+         "Labeled"}}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`t1$$, $CellContext`t2$$, \
+$CellContext`t3$$}, ControllerLinking -> True}, "DefaultOptions" :> {}],
+     ImageSizeCache->{969., {229., 234.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`Ep[
+         Pattern[$CellContext`kk, 
+          Blank[]], 
+         Pattern[$CellContext`tt1, 
+          Blank[]], 
+         Pattern[$CellContext`tt2, 
+          Blank[]], 
+         Pattern[$CellContext`tt3, 
+          Blank[]]] := 
+       Sqrt[($CellContext`tt1 + $CellContext`tt2 
+            Cos[$CellContext`kk] + $CellContext`tt3 
+            Cos[2 $CellContext`kk])^2 + ($CellContext`tt2 
+            Sin[$CellContext`kk] + $CellContext`tt3 
+            Sin[2 $CellContext`kk])^2]; $CellContext`En[
+         Pattern[$CellContext`kk, 
+          Blank[]], 
+         Pattern[$CellContext`tt1, 
+          Blank[]], 
+         Pattern[$CellContext`tt2, 
+          Blank[]], 
+         Pattern[$CellContext`tt3, 
+          Blank[]]] := -
+        Sqrt[($CellContext`tt1 + $CellContext`tt2 
+             Cos[$CellContext`kk] + $CellContext`tt3 
+             Cos[2 $CellContext`kk])^2 + ($CellContext`tt2 
+             Sin[$CellContext`kk] + $CellContext`tt3 
+             Sin[2 $CellContext`kk])^2]; Null); Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7894757577302256`*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 641},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 1645, 46, 92, "Input"],
+Cell[2215, 70, 2172, 43, 298, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4424, 118, 24347, 578, 913, "Input"],
+Cell[28774, 698, 7728, 160, 480, "Output"],
+Cell[36505, 860, 7763, 160, 480, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

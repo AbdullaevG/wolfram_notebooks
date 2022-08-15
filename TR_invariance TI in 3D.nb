@@ -1,0 +1,493 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     18472,        484]
+NotebookOptionsPosition[     17682,        452]
+NotebookOutlinePosition[     18027,        467]
+CellTagsIndexPosition[     17984,        464]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"H", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"M1", "-", 
+       RowBox[{"Cos", "[", "x", "]"}], "-", 
+       RowBox[{"Cos", "[", "y", "]"}], "-", 
+       RowBox[{"Cos", "[", "z", "]"}]}], ",", "0", ",", 
+      RowBox[{"Sin", "[", "z", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "-", 
+       RowBox[{"1", "I", "*", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"M1", "-", 
+       RowBox[{"Cos", "[", "x", "]"}], "-", 
+       RowBox[{"Cos", "[", "y", "]"}], "-", 
+       RowBox[{"Cos", "[", "z", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "+", 
+       RowBox[{"1", "I", "*", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], ",", 
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", "z", "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Sin", "[", "z", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "-", 
+       RowBox[{"1", "I", "*", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], ",", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"M1", "-", 
+         RowBox[{"Cos", "[", "x", "]"}], "-", 
+         RowBox[{"Cos", "[", "y", "]"}], "-", 
+         RowBox[{"Cos", "[", "z", "]"}]}], ")"}]}], ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "+", 
+       RowBox[{"1", "I", "*", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], ",", 
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", "z", "]"}]}], ",", "0", ",", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"M1", "-", 
+         RowBox[{"Cos", "[", "x", "]"}], "-", 
+         RowBox[{"Cos", "[", "y", "]"}], "-", 
+         RowBox[{"Cos", "[", "z", "]"}]}], ")"}]}]}], "}"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "H", "]"}]}], "Input",
+ CellChangeTimes->{{3.792995244834365*^9, 3.79299551458708*^9}, 
+   3.7929960302467995`*^9, {3.7930028021395655`*^9, 3.793002817848996*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"M1", "-", 
+       RowBox[{"Cos", "[", "x", "]"}], "-", 
+       RowBox[{"Cos", "[", "y", "]"}], "-", 
+       RowBox[{"Cos", "[", "z", "]"}]}], "0", 
+      RowBox[{"Sin", "[", "z", "]"}], 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "-", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}]},
+     {"0", 
+      RowBox[{"M1", "-", 
+       RowBox[{"Cos", "[", "x", "]"}], "-", 
+       RowBox[{"Cos", "[", "y", "]"}], "-", 
+       RowBox[{"Cos", "[", "z", "]"}]}], 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], 
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", "z", "]"}]}]},
+     {
+      RowBox[{"Sin", "[", "z", "]"}], 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "-", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"-", "M1"}], "+", 
+       RowBox[{"Cos", "[", "x", "]"}], "+", 
+       RowBox[{"Cos", "[", "y", "]"}], "+", 
+       RowBox[{"Cos", "[", "z", "]"}]}], "0"},
+     {
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], 
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", "z", "]"}]}], "0", 
+      RowBox[{
+       RowBox[{"-", "M1"}], "+", 
+       RowBox[{"Cos", "[", "x", "]"}], "+", 
+       RowBox[{"Cos", "[", "y", "]"}], "+", 
+       RowBox[{"Cos", "[", "z", "]"}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.7929955163621807`*^9, 3.792995955157319*^9, {3.7929960175774703`*^9, 
+   3.792996030954339*^9}, 3.7930028252660723`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"B", ":=", " ", 
+   RowBox[{"Eigenvalues", "[", "H", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f1", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_", ",", "M1_"}], "]"}], "=", 
+   RowBox[{"Re", "[", 
+    RowBox[{"B", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f2", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_", ",", "M1_"}], "]"}], "=", 
+   RowBox[{"Re", "[", 
+    RowBox[{"B", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f3", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_", ",", "M1_"}], "]"}], "=", 
+   RowBox[{"Re", "[", 
+    RowBox[{"B", "[", 
+     RowBox[{"[", "3", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f4", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_", ",", "M1_"}], "]"}], "=", 
+   RowBox[{"Re", "[", 
+    RowBox[{"B", "[", 
+     RowBox[{"[", "4", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"x", ",", "0", ",", "0", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"x", ",", "0", ",", "0", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f3", "[", 
+        RowBox[{"x", ",", "0", ",", "0", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f4", "[", 
+        RowBox[{"x", ",", "0", ",", "0", ",", "M1"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M1", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.792995547862562*^9, 3.7929956895550346`*^9}, {
+   3.7929957931364584`*^9, 3.792995831019226*^9}, {3.7929958705955906`*^9, 
+   3.7929960595851755`*^9}, 3.79299610292302*^9, {3.793002791586219*^9, 
+   3.7930027928427005`*^9}, {3.793002834187636*^9, 3.7930029402789516`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`M1$$ = -4., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`M1$$], -4, 4}}, Typeset`size$$ = {360., {109., 114.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`M1$11622$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`M1$$ = -4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`M1$$, $CellContext`M1$11622$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`f1[$CellContext`x, 0, 0, $CellContext`M1$$], 
+         $CellContext`f2[$CellContext`x, 0, 0, $CellContext`M1$$], 
+         $CellContext`f3[$CellContext`x, 0, 0, $CellContext`M1$$], 
+         $CellContext`f4[$CellContext`x, 0, 
+          0, $CellContext`M1$$]}, {$CellContext`x, -Pi, Pi}], 
+      "Specifications" :> {{$CellContext`M1$$, -4, 4}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{648., {140., 145.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7929959810282917`*^9, 3.79299606682909*^9}, 
+   3.792996107925881*^9, {3.793002829893405*^9, 3.7930028506218853`*^9}, 
+   3.793002886809247*^9, 3.793002941189806*^9, {3.793003210348053*^9, 
+   3.7930032109923506`*^9}, {3.7930032890132957`*^9, 3.793003336351414*^9}, {
+   3.793003401729938*^9, 3.793003421099967*^9}, {3.79300346986707*^9, 
+   3.793003492932848*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"x", ",", "0", ",", "Pi", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"x", ",", "0", ",", "Pi", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f3", "[", 
+        RowBox[{"x", ",", "0", ",", "Pi", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f4", "[", 
+        RowBox[{"x", ",", "0", ",", "Pi", ",", "M1"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M1", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.79300298676936*^9, 3.793003003012341*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`M1$$ = -4., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`M1$$], -4, 4}}, Typeset`size$$ = {360., {109., 114.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`M1$13760$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`M1$$ = -4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`M1$$, $CellContext`M1$13760$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`f1[$CellContext`x, 0, Pi, $CellContext`M1$$], 
+         $CellContext`f2[$CellContext`x, 0, Pi, $CellContext`M1$$], 
+         $CellContext`f3[$CellContext`x, 0, Pi, $CellContext`M1$$], 
+         $CellContext`f4[$CellContext`x, 0, 
+          Pi, $CellContext`M1$$]}, {$CellContext`x, -Pi, Pi}], 
+      "Specifications" :> {{$CellContext`M1$$, -4, 4}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{648., {140., 145.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7930030046414337`*^9, 3.7930030456802907`*^9}, {
+  3.7930032052519083`*^9, 3.793003207932638*^9}, {3.793003292385315*^9, 
+  3.793003292902871*^9}, {3.7930033243091445`*^9, 3.7930033432806935`*^9}, {
+  3.793003406394079*^9, 3.7930034250368304`*^9}, {3.793003474332245*^9, 
+  3.793003495548194*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"x", ",", "Pi", ",", "0", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"x", ",", "Pi", ",", "0", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f3", "[", 
+        RowBox[{"x", ",", "Pi", ",", "0", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f4", "[", 
+        RowBox[{"x", ",", "Pi", ",", "0", ",", "M1"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M1", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7930030789816523`*^9, 3.793003087970729*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`M1$$ = -4., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`M1$$], -4, 4}}, Typeset`size$$ = {360., {109., 114.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`M1$15241$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`M1$$ = -4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`M1$$, $CellContext`M1$15241$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`f1[$CellContext`x, Pi, 0, $CellContext`M1$$], 
+         $CellContext`f2[$CellContext`x, Pi, 0, $CellContext`M1$$], 
+         $CellContext`f3[$CellContext`x, Pi, 0, $CellContext`M1$$], 
+         $CellContext`f4[$CellContext`x, Pi, 
+          0, $CellContext`M1$$]}, {$CellContext`x, -Pi, Pi}], 
+      "Specifications" :> {{$CellContext`M1$$, -4, 4}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{648., {140., 145.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7930030890938516`*^9, {3.793003197035309*^9, 3.793003197774171*^9}, {
+   3.793003295220931*^9, 3.79300329545971*^9}, {3.793003327548568*^9, 
+   3.793003351484213*^9}, {3.7930034108021665`*^9, 3.7930034282666388`*^9}, {
+   3.793003478148943*^9, 3.7930034981349697`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"x", ",", "Pi", ",", "Pi", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"x", ",", "Pi", ",", "Pi", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f3", "[", 
+        RowBox[{"x", ",", "Pi", ",", "Pi", ",", "M1"}], "]"}], ",", 
+       RowBox[{"f4", "[", 
+        RowBox[{"x", ",", "Pi", ",", "Pi", ",", "M1"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M1", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7930031608782444`*^9, 3.793003168577384*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`M1$$ = -4., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`M1$$], -4, 4}}, Typeset`size$$ = {360., {111., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`M1$15840$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`M1$$ = -4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`M1$$, $CellContext`M1$15840$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`f1[$CellContext`x, Pi, Pi, $CellContext`M1$$], 
+         $CellContext`f2[$CellContext`x, Pi, Pi, $CellContext`M1$$], 
+         $CellContext`f3[$CellContext`x, Pi, Pi, $CellContext`M1$$], 
+         $CellContext`f4[$CellContext`x, Pi, 
+          Pi, $CellContext`M1$$]}, {$CellContext`x, -Pi, Pi}], 
+      "Specifications" :> {{$CellContext`M1$$, -4, 4}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{648., {142., 147.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7930031720392823`*^9, {3.793003297776643*^9, 3.7930032985618906`*^9}, {
+   3.793003330172249*^9, 3.7930033560592456`*^9}, {3.7930034141525965`*^9, 
+   3.793003431717226*^9}, {3.7930034834448724`*^9, 3.7930035003490863`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1350, 641},
+WindowMargins->{{1, Automatic}, {Automatic, 90}},
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 2046, 57, 72, "Input"],
+Cell[2616, 81, 2196, 62, 90, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4849, 148, 2067, 55, 132, "Input"],
+Cell[6919, 205, 2133, 41, 302, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9089, 251, 790, 21, 31, "Input"],
+Cell[9882, 274, 2069, 40, 302, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11988, 319, 793, 21, 31, "Input"],
+Cell[12784, 342, 2043, 40, 302, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14864, 387, 797, 21, 31, "Input"],
+Cell[15664, 410, 2002, 39, 306, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

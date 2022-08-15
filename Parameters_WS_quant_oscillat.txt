@@ -1,0 +1,26 @@
+1. 	d1 = 0.2;
+	d2 = 0.06;
+	mu = 0.8;
+	m = 0.16;
+	T = T/1000;
+Plot[{sigmat[B, m2, T/1000], 10* Magt[B, m2, T/1000] - 10}, {B, 2, 
+  11}, Frame -> True, 
+ PlotLegends -> {"Conductivity", "Magnetization"}, 
+ GridLines -> {{{2.065, Blue}, {2.061, Orange}, {2.83,  Blue}, {2.8,  
+     Orange},  {4.45,  Blue}, {4.4,  Orange}, {10.28,  Blue}, {10,  
+     Orange}}, {0}}]
+
+
+
+2.  d1 = 0.2;
+    d2 = 0.06;
+    mu = 0.8;
+    m = 0.15;
+    T = T/1000;
+Plot[{sigmat[B, m3, T/1000], 10* Magt[B, m3, T/1000] - 10}, {B, 2, 
+  11}, Frame -> True, 
+ PlotLegends -> {"Conductivity", "Magnetization"}, 
+ GridLines -> {{{2.57, Blue}, {2.56, Orange}, {3.54,  Blue}, {3.49,  
+     Orange},  {5.60,  Blue}, {5.45,  Orange}}, {0}}]
+
+

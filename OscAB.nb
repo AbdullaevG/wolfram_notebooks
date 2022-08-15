@@ -1,0 +1,193 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      6400,        184]
+NotebookOptionsPosition[      6069,        168]
+NotebookOutlinePosition[      6413,        183]
+CellTagsIndexPosition[      6370,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"d", "=", "0.12"}], ";", " ", 
+  RowBox[{"mu2", "=", "0.175"}], ";", " ", 
+  RowBox[{"t", "=", "0.4"}], ";", " ", 
+  RowBox[{"c", "=", "6.25"}], ";", 
+  RowBox[{"a1", "=", "0.00125"}], ";", " ", 
+  RowBox[{"G1", "=", "0.00086"}], ";", " ", 
+  RowBox[{"b", "=", "0.0004138"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f5", "[", 
+    RowBox[{"x_", ",", "n1_", ",", "U_"}], "]"}], ":=", 
+   RowBox[{"\[Sqrt]", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["d", "2"], "+", 
+      SuperscriptBox["U", "2"], "+", 
+      RowBox[{"(", 
+       RowBox[{"a1", "*", 
+        RowBox[{"n1", "/", "x"}]}], ")"}], "+", 
+      RowBox[{
+       SuperscriptBox["t", "2"], "/", "2"}], "-", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["t", "2"], "+", 
+           RowBox[{"4", "*", 
+            SuperscriptBox["U", "2"]}]}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"a1", "*", 
+           RowBox[{"n1", "/", "x"}]}], ")"}]}], "+", 
+        RowBox[{"4", "*", 
+         SuperscriptBox["U", "2"], "*", 
+         SuperscriptBox["d", "2"]}], "+", 
+        RowBox[{"2", "*", 
+         SuperscriptBox["t", "2"], "*", "d", "*", "U"}], "+", 
+        RowBox[{
+         SuperscriptBox["t", "4"], "/", "4"}]}]]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"F3", "[", 
+    RowBox[{"x_", ",", "n1_", ",", "U_"}], "]"}], "=", 
+   RowBox[{"(", 
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"mu2", "-", 
+          RowBox[{"f5", "[", 
+           RowBox[{"x", ",", "n1", ",", "U"}], "]"}]}], ")"}], "2"], "+", 
+       SuperscriptBox["G1", "2"]}], ")"}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"F4", "[", 
+    RowBox[{"x_", ",", "U_"}], "]"}], "=", 
+   RowBox[{"b", "*", "0.5", "*", "G1", "*", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"F3", "[", 
+       RowBox[{"x", ",", "n1", ",", "U"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n1", ",", "0", ",", "100"}], "}"}]}], "]"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "/", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Framed", "[", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"F4", "[", 
+          RowBox[{"x", ",", "U"}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"F4", "[", 
+           RowBox[{"x", ",", "0"}], "]"}], "+", "10"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "0.1"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "25"}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"U", ",", "0", ",", "0.17"}], "}"}], ",", 
+     RowBox[{"Alignment", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Right", ",", "Right"}], "}"}]}], ",", 
+     RowBox[{"ContentSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"400", ",", "400"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"RoundingRadius", "\[Rule]", "20"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7643115683254733`*^9, 3.7643116123889575`*^9}, {
+   3.76431164724*^9, 3.764311647708718*^9}, 3.7643116968286543`*^9, {
+   3.764311863616625*^9, 3.7643118736875453`*^9}, {3.7643120120154076`*^9, 
+   3.7643120135934076`*^9}, {3.7643120813594294`*^9, 
+   3.7643120872405744`*^9}, {3.7643121294954853`*^9, 3.7643121364070063`*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`U$$ = 0, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{
+       Hold[$CellContext`U$$], 0, 0.17}}, Typeset`size$$ = {
+     360., {117., 122.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+     Typeset`skipInitDone$$ = True, $CellContext`U$670$$ = 0}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, "Variables" :> {$CellContext`U$$ = 0}, 
+       "ControllerVariables" :> {
+         Hold[$CellContext`U$$, $CellContext`U$670$$, 0]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Plot[{
+          $CellContext`F4[$CellContext`x, $CellContext`U$$], \
+$CellContext`F4[$CellContext`x, 0] + 10}, {$CellContext`x, 0, 0.1}, 
+         PlotRange -> {0, 25}], 
+       "Specifications" :> {{$CellContext`U$$, 0, 0.17}}, 
+       "Options" :> {Alignment -> {Right, Right}, ContentSize -> {400, 400}}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{655., {216., 221.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  RoundingRadius->20,
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.7643116280235205`*^9, 3.7643116507569537`*^9}, 
+   3.764311697312996*^9, 3.76431187461138*^9, 3.7643120141731925`*^9, 
+   3.7643120881283255`*^9, 3.764312137797469*^9, 3.7644017715764217`*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 641},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 3531, 101, 166, "Input"],
+Cell[4101, 125, 1952, 40, 464, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
